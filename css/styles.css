@@ -4,24 +4,11 @@
 
 /*components*/
 @import 'components/status-bar.css';
+@import 'components/nav-bar.css';
 
 /*screens*/
 @import 'screens/login.css';
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #fae10070;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.wrapper {
-    background-color: white;
-    width: 650px;
-    height: 1156px;
 }
