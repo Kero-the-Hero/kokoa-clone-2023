@@ -5,7 +5,6 @@
     background-color: #f9f9fa;
     padding: 20px 50px;
     box-sizing: border-box;
-
     border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 .nav__list {
@@ -14,4 +13,27 @@
 }
 .nav__link {
     color: #2e363e;
+    position: relative;
+}
+.nav__notification {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    right: -10px;
+    top: -14px;
+}
+.nav__list li:nth-child(2) .nav__notification {
+    background-color: tomato;
+    width: 20px;
+    height: 20px;
+}
+
+.nav__list li:nth-child(4) .nav__notification {
+    background-color: tomato;
+    width: 6px;
+    height: 6px;
 }
