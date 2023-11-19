@@ -22,6 +22,13 @@
     z-index: 1;
 }
 
+.main-chat {
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @keyframes fadeIn {
     0% {
         transform: none;
@@ -39,20 +46,13 @@
     }
 }
 
-.main-chat {
-    margin-top: 180px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: fadeIn 0.8s linear;
-}
-
 .chat__timestamp {
     color: white;
     background-color: #92a4b2;
     padding: 15px;
     border-radius: 25px;
     margin-bottom: 25px;
+    animation: fadeIn 0.8s linear forwards;
 }
 
 .message-row {
@@ -73,9 +73,50 @@
     display: block;
 }
 
+@keyframes fadeIn {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    95% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.message__author,
+.message-row img {
+    animation: fadeIn 1.5s linear;
+    animation-delay: 0.8;
+}
+
+@keyframes Receive {
+    0% {
+        opacity: 0;
+    }
+
+    75% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .message__info {
     display: flex;
     align-items: end;
+    transform: translateX(-30vw);
+    animation: Receive 0.8s linear forwards;
+    animation-delay: 1.8s;
 }
 
 .message__bubble {
@@ -93,8 +134,27 @@
     font-size: 14px;
 }
 
+@keyframes Send {
+    0% {
+        opacity: 0;
+    }
+
+    75% {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .message-row--own {
     justify-content: flex-end;
+    transform: translateX(60vw);
+    animation: Send 0.8s linear forwards;
+    animation-delay: 2.8s;
 }
 
 .message-row--own .message__bubble {
@@ -188,7 +248,7 @@
     visibility: hidden;
 }
 
-.reply:focus-within input {
+.reply input:focus {
     width: 97vw;
     transform: translateX(-6%) translateY(-80px);
 }
