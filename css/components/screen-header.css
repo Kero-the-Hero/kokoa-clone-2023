@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 60px var(--horizontal-space);
+    margin-bottom: 15px;
 }
 .screen-header__title {
     font-size: 40px;
@@ -10,4 +11,25 @@
 }
 .screen-header__icons span {
     margin-left: 25px;
+}
+
+.screen-header__icons {
+    display: flex;
+}
+
+.screen-header__icons__column {
+    position: relative;
+}
+
+@keyframes rotateGear {
+    from {
+        transform: none;
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.screen-header__icons .fa-gear:hover {
+    animation: rotateGear 1.5s linear infinite;
 }
