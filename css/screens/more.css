@@ -1,3 +1,8 @@
+#more {
+    height: 200vh;
+    position: relative;
+}
+
 .more-screen .icon-row {
     margin-top: 40px;
 }
@@ -37,4 +42,9 @@
 .more-suggestions__icon-image i {
     font-size: 32px;
     color: white;
+}
+
+.fa-message {
+    color: rgba(0, 0, 0, 1);
+    font-size: 28px;
 }
